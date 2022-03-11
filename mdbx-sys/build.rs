@@ -95,7 +95,7 @@ fn main() {
             .init_c_cfg(cc_builder)
             .build();
 
-        println!("cargo:rustc-link-lib=mdbx");
+        println!("cargo:rustc-link-lib=static=mdbx");
         println!(
             "cargo:rustc-link-search=native={}",
             dst.join("lib").display()
